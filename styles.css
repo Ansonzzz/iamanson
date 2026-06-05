@@ -705,6 +705,10 @@ h3 {
     padding-left: 1em;
   }
 
+  .hero-copy {
+    transform: translateY(-12vh);
+  }
+
   .work-grid,
   .work-card.featured {
     display: block;
