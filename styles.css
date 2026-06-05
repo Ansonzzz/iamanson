@@ -433,18 +433,19 @@ h3 {
   background: linear-gradient(180deg, transparent, rgba(248, 239, 224, 0.26), transparent);
 }
 
-.resume-timeline li {
+.resume-timeline > li {
   position: relative;
   display: grid;
   grid-template-columns: minmax(8rem, 0.27fr) 2.5rem minmax(0, 0.73fr);
   gap: clamp(1rem, 2.4vw, 2.4rem);
-  align-items: center;
+  align-items: start;
   min-height: 12rem;
   padding: clamp(1.5rem, 3.2vw, 2.8rem) 0;
 }
 
 .resume-logo {
   justify-self: center;
+  margin-top: 1rem;
   width: clamp(6.5rem, 13vw, 10rem);
   aspect-ratio: 1;
   display: grid;
@@ -465,9 +466,11 @@ h3 {
 }
 
 .resume-node {
-  position: relative;
+  position: absolute;
+  top: calc(clamp(1.5rem, 3.2vw, 2.8rem) + 1rem + clamp(3.25rem, 6.5vw, 5rem));
+  left: min(27vw, 19rem);
   z-index: 1;
-  justify-self: center;
+  transform: translate(-50%, -50%);
   width: 1.05rem;
   height: 1.05rem;
   border: 4px solid rgba(248, 239, 224, 0.28);
@@ -477,7 +480,8 @@ h3 {
 }
 
 .resume-copy {
-  max-width: 46rem;
+  grid-column: 3;
+  max-width: 52rem;
 }
 
 .resume-org {
@@ -506,6 +510,34 @@ h3 {
   font-size: clamp(0.92rem, 1.45vw, 1.14rem);
   font-weight: 800;
   letter-spacing: 0.04em;
+}
+
+.resume-details {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid rgba(248, 239, 224, 0.12);
+  color: var(--muted);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.7;
+}
+
+.resume-details li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.resume-details li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: var(--warm);
 }
 
 .about {
@@ -666,7 +698,11 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-size: clamp(1.9rem, 8.4vw, 3rem);
+  }
+
+  .title-indent {
+    padding-left: 1em;
   }
 
   .work-grid,
@@ -682,17 +718,25 @@ h3 {
     left: 4.4rem;
   }
 
-  .resume-timeline li {
+  .resume-timeline > li {
     grid-template-columns: 1fr;
     gap: 0.8rem;
     min-height: auto;
     padding-left: 6.1rem;
   }
 
+  .resume-details {
+    gap: 0.75rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
   .resume-logo {
     position: absolute;
     left: 0;
     top: 1.8rem;
+    margin-top: 0;
     width: 3.8rem;
   }
 
@@ -700,10 +744,15 @@ h3 {
     position: absolute;
     left: 3.9rem;
     top: 3.15rem;
+    transform: none;
   }
 
   .resume-copy h3 {
     font-size: clamp(1.85rem, 8.5vw, 2.7rem);
+  }
+
+  .resume-copy {
+    grid-column: 1;
   }
 
   .resume-copy .resume-title-compact {

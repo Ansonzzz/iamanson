@@ -6,7 +6,8 @@ const films = {
       "一个高中生在中秋节这天孤身前往父亲的小三家里，但却意外地发现了自己同父异母的妹妹。在与小三和“妹妹”短暂的相处中，他逐渐意识到了两个家庭的对等关系，最后无奈放弃驱逐这两人，继续暗流涌动的生活。",
     awards:
       "入围第3届IM两岸青年影展\n入围2022年伦敦升空电影节\n入围第15届斋浦尔国际电影节\n入围2022年蒙特利尔独立电影节，获最佳学生作品荣誉提名",
-    link: "https://www.xinpianchang.com/a12002351?from=private_pwd",
+    link: "https://vimeo.com/1198353524?share=copy&fl=sv&fe=ci",
+    embed: "https://player.vimeo.com/video/1198353524",
   },
   "future-song": {
     title: "未来赞美诗",
