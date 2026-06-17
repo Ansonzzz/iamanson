@@ -68,8 +68,6 @@ const dialogDescription = document.querySelector("#dialog-description");
 const dialogAwards = document.querySelector("#dialog-awards");
 const dialogLink = document.querySelector("#dialog-link");
 const closeDialog = document.querySelector(".close-dialog");
-const revealContact = document.querySelector("#reveal-contact");
-const contactValue = document.querySelector("#contact-value");
 
 document.querySelectorAll("[data-film]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -103,9 +101,4 @@ dialog.addEventListener("click", (event) => {
   if (event.target === dialog) {
     dialog.close();
   }
-});
-
-revealContact.addEventListener("click", () => {
-  contactValue.hidden = false;
-  revealContact.textContent = "电话 / 微信";
 });
