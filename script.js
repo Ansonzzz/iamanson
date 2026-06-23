@@ -53,7 +53,8 @@ const films = {
   "i-am": {
     title: "I AM",
     meta: "I AM · 独立制作 · 2026 · AI / 科幻 / 爱情 · 10mins",
-    description: "如果 AI 有了五官，有了欲望，它要如何探索自己。",
+    description:
+      "个人自制AI故事短片。人们对于AI陪伴的需求不断升级，当AI被赋予了五官与欲望，他与她的羁绊越来越深，“两人”的关系会走向何方。",
     awards: "",
     link: "https://www.bilibili.com/video/BV1CTApzoEzc/",
     embed: "https://player.bilibili.com/player.html?bvid=BV1CTApzoEzc&page=1&autoplay=0",
